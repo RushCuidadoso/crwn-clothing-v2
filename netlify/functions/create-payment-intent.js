@@ -1,8 +1,4 @@
-const path = require('node:path');
-
-require("dotenv").config({
-  path: path.join(__dirname, "..", "..", "src", ".env"),
-});
+require("dotenv").config();
 const stripe = require("stripe")(process.env.REACT_APP_STRIPE_SECRET_KEY);
 exports.handler = async (event) => {
   try {
